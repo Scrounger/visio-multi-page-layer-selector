@@ -43,9 +43,10 @@
             this.label1.Location = new System.Drawing.Point(12, 148);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(10);
-            this.label1.Size = new System.Drawing.Size(523, 293);
+            this.label1.Size = new System.Drawing.Size(523, 273);
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
+            this.label1.UseCompatibleTextRendering = true;
             // 
             // label2
             // 
@@ -92,10 +93,10 @@
             this.linkGitHub.Location = new System.Drawing.Point(83, 58);
             this.linkGitHub.Name = "linkGitHub";
             this.linkGitHub.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.linkGitHub.Size = new System.Drawing.Size(57, 13);
+            this.linkGitHub.Size = new System.Drawing.Size(293, 13);
             this.linkGitHub.TabIndex = 5;
             this.linkGitHub.TabStop = true;
-            this.linkGitHub.Text = "linkLabel1";
+            this.linkGitHub.Text = "https://github.com/Scrounger/visio-multi-page-layer-selector";
             this.linkGitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGitHub_LinkClicked);
             // 
             // AboutForm
@@ -103,7 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(547, 450);
+            this.ClientSize = new System.Drawing.Size(547, 435);
             this.Controls.Add(this.linkGitHub);
             this.Controls.Add(this.lbVersion);
             this.Controls.Add(this.label4);

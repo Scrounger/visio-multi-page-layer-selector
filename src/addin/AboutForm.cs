@@ -29,7 +29,7 @@ namespace Visio_Multi_Page_Layer_Selector
 
         private void linkGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VWAXSTS634G88&source=url");
+            System.Diagnostics.Process.Start("https://github.com/Scrounger/visio-multi-page-layer-selector");
         }
     }
 }
