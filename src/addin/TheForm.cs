@@ -288,8 +288,26 @@ namespace Visio_Multi_Page_Layer_Selector
                     Initialize_dgvDefaults();
 
                     item.IsDefault = true;
-                    dgvLayerSelector.Update();
                     dgvLayerSelector.Refresh();
+                    dgvLayerSelector.EndEdit();
+                }
+            }
+        }
+
+        private void dgvLayerSelector_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex >= dgvLayerSelector.Columns["Visible"].Index)
+                {
+                    MyLayer item = (MyLayer)dgvLayerSelector.Rows[e.RowIndex].DataBoundItem;
+
+                    if (!item.IsDefault)
+                    {
+                        var cell = dgvLayerSelector[e.ColumnIndex, e.RowIndex];
+                        cell.Value = !Convert.ToBoolean(cell.EditedFormattedValue);
+                        dgvLayerSelector.EndEdit();
+                    }
                 }
             }
         }
@@ -569,6 +587,23 @@ namespace Visio_Multi_Page_Layer_Selector
                     Initialize_dgvDefaults();
                 }
             }
+
+            dgvDefaults.EndEdit();
+        }
+
+        private void dgvDefaults_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex >= dgvDefaults.Columns["Visible"].Index)
+                {
+                    MyDefaults item = (MyDefaults)dgvDefaults.Rows[e.RowIndex].DataBoundItem;
+
+                    var cell = dgvDefaults[e.ColumnIndex, e.RowIndex];
+                    cell.Value = !Convert.ToBoolean(cell.EditedFormattedValue);
+                    dgvDefaults.EndEdit();
+                }
+            }
         }
 
         private void DgvDefaults_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -652,17 +687,7 @@ namespace Visio_Multi_Page_Layer_Selector
             Initialize_dgvLayerSelector();
             Initialize_dgvDefaults();
         }
-
-
-
-
-
-
-
-
-
         #endregion
-
 
     }
 }

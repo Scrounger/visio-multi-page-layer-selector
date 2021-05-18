@@ -155,6 +155,7 @@ namespace Visio_Multi_Page_Layer_Selector
             this.dgvLayerSelector.RowTemplate.Height = 24;
             this.dgvLayerSelector.Size = new System.Drawing.Size(590, 264);
             this.dgvLayerSelector.TabIndex = 0;
+            this.dgvLayerSelector.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLayerSelector_CellClick);
             this.dgvLayerSelector.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLayerSelector_CellContentClick);
             this.dgvLayerSelector.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvLayerSelector_CellFormatting);
             this.dgvLayerSelector.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvLayerSelector_ColumnHeaderMouseClick);
@@ -383,6 +384,7 @@ namespace Visio_Multi_Page_Layer_Selector
             this.dgvDefaults.RowTemplate.Height = 24;
             this.dgvDefaults.Size = new System.Drawing.Size(594, 346);
             this.dgvDefaults.TabIndex = 1;
+            this.dgvDefaults.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDefaults_CellClick);
             this.dgvDefaults.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDefaults_CellContentClick);
             this.dgvDefaults.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDefaults_CellEndEdit);
             this.dgvDefaults.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvDefaults_CellFormatting);
