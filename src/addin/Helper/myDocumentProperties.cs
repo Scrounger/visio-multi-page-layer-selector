@@ -26,6 +26,71 @@ namespace Visio_Multi_Page_Layer_Selector.Helper
             }
         }
 
+        public static bool ShowPrint
+        {
+            get
+            {
+                string result = ReadProperty(GetPropertyName());
+                return !string.IsNullOrEmpty(result) ? Convert.ToBoolean(result) : true;
+            }
+            set
+            {
+                WriteProperty(GetPropertyName(), value);
+            }
+        }
+
+        public static bool ShowActive
+        {
+            get
+            {
+                string result = ReadProperty(GetPropertyName());
+                return !string.IsNullOrEmpty(result) ? Convert.ToBoolean(result) : true;
+            }
+            set
+            {
+                WriteProperty(GetPropertyName(), value);
+            }
+        }
+
+        public static bool ShowLock
+        {
+            get
+            {
+                string result = ReadProperty(GetPropertyName());
+                return !string.IsNullOrEmpty(result) ? Convert.ToBoolean(result) : true;
+            }
+            set
+            {
+                WriteProperty(GetPropertyName(), value);
+            }
+        }
+
+        public static bool ShowSnap
+        {
+            get
+            {
+                string result = ReadProperty(GetPropertyName());
+                return !string.IsNullOrEmpty(result) ? Convert.ToBoolean(result) : true;
+            }
+            set
+            {
+                WriteProperty(GetPropertyName(), value);
+            }
+        }
+
+        public static bool ShowGlue
+        {
+            get
+            {
+                string result = ReadProperty(GetPropertyName());
+                return !string.IsNullOrEmpty(result) ? Convert.ToBoolean(result) : true;
+            }
+            set
+            {
+                WriteProperty(GetPropertyName(), value);
+            }
+        }
+
         public static string FavoritesList
         {
             get

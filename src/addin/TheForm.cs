@@ -58,27 +58,27 @@ namespace Visio_Multi_Page_Layer_Selector
                             layer.CellsC[(int)Visio.VisCellIndices.visLayerVisible].Formula = item.Visible == true ? "1" : "0";
                         }
 
-                        if (Properties.Settings.Default.show_print)
+                        if (MyDocumentProperties.ShowPrint)
                         {
                             layer.CellsC[(int)Visio.VisCellIndices.visLayerPrint].Formula = item.Print == true ? "1" : "0";
                         }
 
-                        if (Properties.Settings.Default.show_active)
+                        if (MyDocumentProperties.ShowActive)
                         {
                             layer.CellsC[(int)Visio.VisCellIndices.visLayerActive].Formula = item.Active == true ? "1" : "0";
                         }
 
-                        if (Properties.Settings.Default.show_lock)
+                        if (MyDocumentProperties.ShowLock)
                         {
                             layer.CellsC[(int)Visio.VisCellIndices.visLayerLock].Formula = item.Lock == true ? "1" : "0";
                         }
 
-                        if (Properties.Settings.Default.show_snap)
+                        if (MyDocumentProperties.ShowSnap)
                         {
                             layer.CellsC[(int)Visio.VisCellIndices.visLayerSnap].Formula = item.Snap == true ? "1" : "0";
                         }
 
-                        if (Properties.Settings.Default.show_glue)
+                        if (MyDocumentProperties.ShowGlue)
                         {
                             layer.CellsC[(int)Visio.VisCellIndices.visLayerGlue].Formula = item.Glue == true ? "1" : "0";
                         }
@@ -180,19 +180,19 @@ namespace Visio_Multi_Page_Layer_Selector
             dgvLayerSelector.Columns["Visible"].Visible = MyDocumentProperties.ShowVisible;
 
             dgvLayerSelector.Columns["Print"].HeaderText = Properties.Resources.loc_print;
-            dgvLayerSelector.Columns["Print"].Visible = Properties.Settings.Default.show_print;
+            dgvLayerSelector.Columns["Print"].Visible = MyDocumentProperties.ShowPrint;
 
             dgvLayerSelector.Columns["Active"].HeaderText = Properties.Resources.loc_active;
-            dgvLayerSelector.Columns["Active"].Visible = Properties.Settings.Default.show_active;
+            dgvLayerSelector.Columns["Active"].Visible = MyDocumentProperties.ShowActive;
 
             dgvLayerSelector.Columns["Lock"].HeaderText = Properties.Resources.loc_lock;
-            dgvLayerSelector.Columns["Lock"].Visible = Properties.Settings.Default.show_lock;
+            dgvLayerSelector.Columns["Lock"].Visible = MyDocumentProperties.ShowLock;
 
             dgvLayerSelector.Columns["Snap"].HeaderText = Properties.Resources.loc_snap;
-            dgvLayerSelector.Columns["Snap"].Visible = Properties.Settings.Default.show_snap;
+            dgvLayerSelector.Columns["Snap"].Visible = MyDocumentProperties.ShowSnap;
 
             dgvLayerSelector.Columns["Glue"].HeaderText = Properties.Resources.loc_glue;
-            dgvLayerSelector.Columns["Glue"].Visible = Properties.Settings.Default.show_glue;
+            dgvLayerSelector.Columns["Glue"].Visible = MyDocumentProperties.ShowGlue;
 
             dgvLayerSelector.Columns["isDefault"].Visible = false;
         }
@@ -500,19 +500,19 @@ namespace Visio_Multi_Page_Layer_Selector
             dgvDefaults.Columns["Visible"].Visible = MyDocumentProperties.ShowVisible;
 
             dgvDefaults.Columns["Print"].HeaderText = Properties.Resources.loc_print;
-            dgvDefaults.Columns["Print"].Visible = Properties.Settings.Default.show_print;
+            dgvDefaults.Columns["Print"].Visible = MyDocumentProperties.ShowPrint;
 
             dgvDefaults.Columns["Active"].HeaderText = Properties.Resources.loc_active;
-            dgvDefaults.Columns["Active"].Visible = Properties.Settings.Default.show_active;
+            dgvDefaults.Columns["Active"].Visible = MyDocumentProperties.ShowActive;
 
             dgvDefaults.Columns["Lock"].HeaderText = Properties.Resources.loc_lock;
-            dgvDefaults.Columns["Lock"].Visible = Properties.Settings.Default.show_lock;
+            dgvDefaults.Columns["Lock"].Visible = MyDocumentProperties.ShowLock;
 
             dgvDefaults.Columns["Snap"].HeaderText = Properties.Resources.loc_snap;
-            dgvDefaults.Columns["Snap"].Visible = Properties.Settings.Default.show_snap;
+            dgvDefaults.Columns["Snap"].Visible = MyDocumentProperties.ShowSnap;
 
             dgvDefaults.Columns["Glue"].HeaderText = Properties.Resources.loc_glue;
-            dgvDefaults.Columns["Glue"].Visible = Properties.Settings.Default.show_glue;
+            dgvDefaults.Columns["Glue"].Visible = MyDocumentProperties.ShowGlue;
         }
 
         private void DgvDefaults_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -595,19 +595,19 @@ namespace Visio_Multi_Page_Layer_Selector
             cbSettingsVisible.Checked = MyDocumentProperties.ShowVisible;
             cbSettingsVisible.Text = Properties.Resources.loc_show_visible_column;
 
-            cbSettingsPrint.Checked = Properties.Settings.Default.show_print;
+            cbSettingsPrint.Checked = MyDocumentProperties.ShowPrint;
             cbSettingsPrint.Text = Properties.Resources.loc_show_print_column;
 
-            cbSettingsActive.Checked = Properties.Settings.Default.show_active;
+            cbSettingsActive.Checked = MyDocumentProperties.ShowActive;
             cbSettingsActive.Text = Properties.Resources.loc_show_active_column;
 
-            cbSettingsLock.Checked = Properties.Settings.Default.show_lock;
+            cbSettingsLock.Checked = MyDocumentProperties.ShowLock;
             cbSettingsLock.Text = Properties.Resources.loc_show_lock_column;
 
-            cbSettingsSnap.Checked = Properties.Settings.Default.show_snap;
+            cbSettingsSnap.Checked = MyDocumentProperties.ShowSnap;
             cbSettingsSnap.Text = Properties.Resources.loc_show_snap_column;
 
-            cbSettingsGlue.Checked = Properties.Settings.Default.show_glue;
+            cbSettingsGlue.Checked = MyDocumentProperties.ShowGlue;
             cbSettingsGlue.Text = Properties.Resources.loc_show_glue_column;
         }
 
@@ -619,37 +619,36 @@ namespace Visio_Multi_Page_Layer_Selector
 
         private void CbSettingsPrint_CheckedChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.show_print = cbSettingsPrint.Checked;
+            MyDocumentProperties.ShowPrint = cbSettingsPrint.Checked;
             SaveSettings();
         }
 
         private void CbSettingsActive_CheckedChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.show_active = cbSettingsActive.Checked;
+            MyDocumentProperties.ShowActive = cbSettingsActive.Checked;
             SaveSettings();
         }
 
         private void CbSettingsLock_CheckedChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.show_lock = cbSettingsLock.Checked;
+            MyDocumentProperties.ShowLock = cbSettingsLock.Checked;
             SaveSettings();
         }
 
         private void CbSettingsSnap_CheckedChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.show_snap = cbSettingsSnap.Checked;
+            MyDocumentProperties.ShowSnap = cbSettingsSnap.Checked;
             SaveSettings();
         }
 
         private void CbSettingsGlue_CheckedChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.show_glue = cbSettingsGlue.Checked;
+            MyDocumentProperties.ShowGlue = cbSettingsGlue.Checked;
             SaveSettings();
         }
 
         private void SaveSettings()
         {
-            Properties.Settings.Default.Save();
             Initialize_dgvLayerSelector();
             Initialize_dgvDefaults();
         }
