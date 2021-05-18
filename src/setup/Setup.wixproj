@@ -26,16 +26,6 @@
     <Content Include="License.rtf" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Visio_Multi_Page_Layer_Selector\Visio_Multi_Page_Layer_Selector.csproj">
-      <Name>Visio_Multi_Page_Layer_Selector</Name>
-      <Project>13659b89-1b1e-45b1-b358-c6468cab113d</Project>
-      <Private>True</Private>
-      <DoNotHarvest>True</DoNotHarvest>
-      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
-      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WixExtension Include="WixNetFxExtension">
       <HintPath>$(WixExtDir)\WixNetFxExtension.dll</HintPath>
       <Name>WixNetFxExtension</Name>
@@ -57,6 +47,16 @@
     <Content Include="build\VisioWixExtension.xsd" />
     <Content Include="Stencil_1_M.vss" />
     <Content Include="Template_1_M.vst" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\addin\addin.csproj">
+      <Name>addin</Name>
+      <Project>{13659b89-1b1e-45b1-b358-c6468cab113d}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <!--

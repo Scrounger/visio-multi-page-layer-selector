@@ -80,6 +80,9 @@
   <PropertyGroup>
     <ManifestCertificateThumbprint>CDACDB0B9ABA057C1F48C4F994896B610F2DD667</ManifestCertificateThumbprint>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\img_mpls_256.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">

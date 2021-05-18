@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <!-- Wix Project template to install Visio components -->
 
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
 	xmlns:visio="http://schemas.microsoft.com/wix/Visio" >
 
-  <?define Version="1.0.0.0"?>
+  <?define Version="!(bind.fileVersion.Visio_Multi_Page_Layer_Selector.dll)"?>
   <?define ProductCode = "{df1a64e9-0825-454b-8ab9-ef9b33d32ba3}" ?>
   <?define UpgradeCode = "{b8cf5448-65f0-49c0-8342-67a8e2fcf8f1}" ?>
+ 
+  <Product Id="$(var.ProductCode)" Name="Visio Multi Page Layer Selector" Language="1033" Version="$(var.Version)" Manufacturer="scrounger" UpgradeCode="$(var.UpgradeCode)">
+    <Package InstallerVersion="200" Compressed="yes" Comments="Version: $(var.Version)" />
 
-  <Product Id="$(var.ProductCode)" Name="Visio Multi Page Layer Selector" Language="1033" Version="$(var.Version)" Manufacturer="ab" UpgradeCode="$(var.UpgradeCode)">
-    <Package InstallerVersion="200" Compressed="yes" />
+    <Icon Id="icon.ico" SourceFile="../addin/Resources/img_mpls_256.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
 
-    
     <!-- check taht .NET 4 (client profile at least) is installed -->
     <PropertyRef Id="NETFRAMEWORK40CLIENT" />
     <PropertyRef Id="NETFRAMEWORK40FULL" />
@@ -47,6 +50,7 @@
 	  <!-- Visio 2007 support -->
     <!-- override default license -->
     <WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
+    <WixVariable Id="WixUIBannerBmp" Value="./img/banner.bmp" />
     
     <!-- allow major upgrades -->
     <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
@@ -66,7 +70,7 @@
       
       <UIRef Id="WixUI_Advanced"/>
       <Property Id="ALLUSERS" Value="2" />
-      <Property Id="ApplicationFolderName" Value="Visio_Multi_Page_Layer_Selector" />
+      <Property Id="ApplicationFolderName" Value="Visio Multi Page Layer Selector" />
       <Property Id="WixAppFolder" Value="WixPerMachineFolder" />
 
       <Publish Dialog="InstallScopeDlg" Control="Next" Property="MSIINSTALLPERUSER" Value="1" >WixAppFolder = "WixPerUserFolder"</Publish>
@@ -80,7 +84,7 @@
   <Fragment>
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="ProgramFilesFolder">
-        <Directory Id="APPLICATIONFOLDER" Name="Visio_Multi_Page_Layer_Selector">
+        <Directory Id="APPLICATIONFOLDER" Name="Visio Multi Page Layer Selector">
           
         </Directory>
       </Directory>
@@ -88,18 +92,18 @@
     
     <!-- Visio files to be included in setup -->
     <ComponentGroup Id="VisioFiles" Directory="APPLICATIONFOLDER">
-      <!-- Sample template file. Feel free to modify the optional parameters -->
+      <!-- Sample template file. Feel free to modify the optional parameters --><!--
       <Component>
         <File Name="Stencil_1_M.vss">
           <visio:PublishStencil MenuPath="Visio Multi Page Layer Selector\Stencil 1" />
         </File>
       </Component>
-      <!-- Sample template file. Feel free to modify the optional parameters -->
+      --><!-- Sample template file. Feel free to modify the optional parameters --><!--
       <Component>
         <File Name="Template_1_M.vst">
           <visio:PublishTemplate MenuPath="Visio Multi Page Layer Selector\Template 1" />
         </File>
-      </Component>
+      </Component>-->
     </ComponentGroup>
     
     <!-- Addin files to be included in setup -->
@@ -107,24 +111,24 @@
       
       <!-- Add the addin dll to the setup. Reference using project referencing -->
       <Component>
-        <File Source="$(var.Visio_Multi_Page_Layer_Selector.TargetPath)" >
+        <File Source="$(var.addin.TargetPath)" >
           
         </File>
       </Component>
       
       <!-- VSTO framework file -->
       <Component>
-        <File Source="$(var.Visio_Multi_Page_Layer_Selector.TargetDir)Microsoft.Office.Tools.Common.v4.0.Utilities.dll"></File>
+        <File Source="$(var.addin.TargetDir)Microsoft.Office.Tools.Common.v4.0.Utilities.dll"></File>
       </Component>
 
       <!-- Add the addin manifest file -->
       <Component>
-        <File Source="$(var.Visio_Multi_Page_Layer_Selector.TargetPath).manifest"></File>
+        <File Source="$(var.addin.TargetPath).manifest"></File>
       </Component>
       
       <!--  The .vsto file is addin discovery file. Set up registry to point to this file using |vstolocal -->
       <Component>
-        <File Source="$(var.Visio_Multi_Page_Layer_Selector.TargetDir)$(var.Visio_Multi_Page_Layer_Selector.TargetName).vsto">
+        <File Source="$(var.addin.TargetDir)$(var.addin.TargetName).vsto">
           <visio:PublishAddin />
         </File>
       </Component>
