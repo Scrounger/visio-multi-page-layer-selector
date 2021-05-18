@@ -133,6 +133,7 @@
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\myDefaults.cs" />
+    <Compile Include="Helper\myDocumentProperties.cs" />
     <Compile Include="Helper\myFavorites.cs" />
     <Compile Include="Helper\myLayer.cs" />
     <Compile Include="Helper\myVisio.cs" />

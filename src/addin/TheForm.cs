@@ -53,7 +53,7 @@ namespace Visio_Multi_Page_Layer_Selector
                     if (item != null)
                     {
 
-                        if (Properties.Settings.Default.show_visible)
+                        if (MyDocumentProperties.ShowVisible)
                         {
                             layer.CellsC[(int)Visio.VisCellIndices.visLayerVisible].Formula = item.Visible == true ? "1" : "0";
                         }
@@ -177,7 +177,7 @@ namespace Visio_Multi_Page_Layer_Selector
             dgvLayerSelector.Columns["Name"].HeaderText = Properties.Resources.loc_name;
 
             dgvLayerSelector.Columns["Visible"].HeaderText = Properties.Resources.loc_visible;
-            dgvLayerSelector.Columns["Visible"].Visible = Properties.Settings.Default.show_visible;
+            dgvLayerSelector.Columns["Visible"].Visible = MyDocumentProperties.ShowVisible;
 
             dgvLayerSelector.Columns["Print"].HeaderText = Properties.Resources.loc_print;
             dgvLayerSelector.Columns["Print"].Visible = Properties.Settings.Default.show_print;
@@ -497,7 +497,7 @@ namespace Visio_Multi_Page_Layer_Selector
             dgvDefaults.Columns["Name"].HeaderText = Properties.Resources.loc_name;
 
             dgvDefaults.Columns["Visible"].HeaderText = Properties.Resources.loc_visible;
-            dgvDefaults.Columns["Visible"].Visible = Properties.Settings.Default.show_visible;
+            dgvDefaults.Columns["Visible"].Visible = MyDocumentProperties.ShowVisible;
 
             dgvDefaults.Columns["Print"].HeaderText = Properties.Resources.loc_print;
             dgvDefaults.Columns["Print"].Visible = Properties.Settings.Default.show_print;
@@ -592,7 +592,7 @@ namespace Visio_Multi_Page_Layer_Selector
         #region Tab Settings
         private void Initialize_tabSettings()
         {
-            cbSettingsVisible.Checked = Properties.Settings.Default.show_visible;
+            cbSettingsVisible.Checked = MyDocumentProperties.ShowVisible;
             cbSettingsVisible.Text = Properties.Resources.loc_show_visible_column;
 
             cbSettingsPrint.Checked = Properties.Settings.Default.show_print;
@@ -613,7 +613,7 @@ namespace Visio_Multi_Page_Layer_Selector
 
         private void CbSettingsVisible_CheckedChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.show_visible = cbSettingsVisible.Checked;
+            MyDocumentProperties.ShowVisible = cbSettingsVisible.Checked;
             SaveSettings();
         }
 

@@ -50,18 +50,6 @@ namespace Visio_Multi_Page_Layer_Selector.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool show_visible {
-            get {
-                return ((bool)(this["show_visible"]));
-            }
-            set {
-                this["show_visible"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool show_print {
             get {
                 return ((bool)(this["show_print"]));
