@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="loc_Settings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="loc_show_layer_selector" xml:space="preserve">
+    <value>Ebenenauswahl anzeigen</value>
+  </data>
+  <data name="loc_Set_layer_properties_for_all_pages" xml:space="preserve">
+    <value>Layer-Eigenschaften für alle Seiten festlegen</value>
+  </data>
+  <data name="loc_Favorites" xml:space="preserve">
+    <value>Favoriten</value>
+  </data>
+  <data name="loc_subcategories" xml:space="preserve">
+    <value>Unterkategorien</value>
+  </data>
+  <data name="loc_layers" xml:space="preserve">
+    <value>Ebenen</value>
+  </data>
+  <data name="loc_defaults" xml:space="preserve">
+    <value>Standardwerte</value>
+  </data>
+  <data name="loc_add_to_defaults_list" xml:space="preserve">
+    <value>zu Standardwerten hinzufügen</value>
+  </data>
+  <data name="loc_add_to_subcategory_list" xml:space="preserve">
+    <value>zu Unterkategorien hinzufügen</value>
+  </data>
+  <data name="loc_active" xml:space="preserve">
+    <value>Aktiv</value>
+  </data>
+  <data name="loc_lock" xml:space="preserve">
+    <value>Sperren</value>
+  </data>
+  <data name="loc_print" xml:space="preserve">
+    <value>Drucken</value>
+  </data>
+  <data name="loc_snap" xml:space="preserve">
+    <value>Ausrichten</value>
+  </data>
+  <data name="loc_visible" xml:space="preserve">
+    <value>Sichtbar</value>
+  </data>
+  <data name="loc_name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="loc_glue" xml:space="preserve">
+    <value>Kleben</value>
+  </data>
+  <data name="loc_show_active_column" xml:space="preserve">
+    <value>Spalte 'Aktiv' anzeigen</value>
+  </data>
+  <data name="loc_show_glue_column" xml:space="preserve">
+    <value>Spalte 'Kleben' anzeigen</value>
+  </data>
+  <data name="loc_show_lock_column" xml:space="preserve">
+    <value>Spalten 'Sperren' anzeigen</value>
+  </data>
+  <data name="loc_show_print_column" xml:space="preserve">
+    <value>Spalte 'Drucken' anzeigen</value>
+  </data>
+  <data name="loc_show_snap_column" xml:space="preserve">
+    <value>Spalte 'Ausrichten' anzeigen</value>
+  </data>
+  <data name="loc_show_visible_column" xml:space="preserve">
+    <value>Spalte 'Sichtbar' anzeigen</value>
+  </data>
+  <data name="loc_confirm" xml:space="preserve">
+    <value>Bestätigen</value>
+  </data>
+  <data name="loc_are_you_sure_to_delete" xml:space="preserve">
+    <value>Möchten Sie löschen?</value>
+  </data>
+  <data name="loc_btnApply" xml:space="preserve">
+    <value>Übernehmen</value>
+  </data>
+  <data name="loc_save_favorites" xml:space="preserve">
+    <value>Favoriten speichern</value>
+  </data>
+  <data name="loc_The_favorite_already_exists" xml:space="preserve">
+    <value>Favorit {0} ist bereits vorhanden</value>
+  </data>
+  <data name="loc_save_current_selection_as_favourite" xml:space="preserve">
+    <value>Aktuelle Auswahl als Favorit speichern</value>
+  </data>
+  <data name="loc_Enter_the_name_under_which_the_favorite_should_be_saved" xml:space="preserve">
+    <value>Geben Sie den Namen ein, unter dem der Favorit gespeichert werden soll</value>
+  </data>
+  <data name="loc_Do_you_want_to_overwrite_the_favorite" xml:space="preserve">
+    <value>Möchten Sie den Favoriten überschreiben?</value>
+  </data>
+  <data name="loc_Do_you_really_want_to_delete" xml:space="preserve">
+    <value>Wollen Sie wirklich löschen?</value>
+  </data>
+  <data name="loc_title_delete" xml:space="preserve">
+    <value>Element löschen</value>
+  </data>
+  <data name="loc_Buy_me_a_coffee" xml:space="preserve">
+    <value>Gib mir einen Kaffee aus</value>
+  </data>
+  <data name="loc_version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="loc_Save_as_favorite" xml:space="preserve">
+    <value>Als Favorit speichern</value>
+  </data>
+  <data name="loc_Apply_layers_settings_from_favorite" xml:space="preserve">
+    <value>Ebeneneinstellungen aus Favoriten übernehmen</value>
+  </data>
+  <data name="loc_Delete_entry" xml:space="preserve">
+    <value>Eintrag löschen</value>
+  </data>
+</root>
