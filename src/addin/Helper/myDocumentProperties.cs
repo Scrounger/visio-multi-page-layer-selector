@@ -26,6 +26,30 @@ namespace Visio_Multi_Page_Layer_Selector.Helper
             }
         }
 
+        public static string FavoritesList
+        {
+            get
+            {
+                return ReadProperty(GetPropertyName());
+            }
+            set
+            {
+                WriteProperty(GetPropertyName(), value);
+            }
+        }
+
+        public static string DefaultsList
+        {
+            get
+            {
+                return ReadProperty(GetPropertyName());
+            }
+            set
+            {
+                WriteProperty(GetPropertyName(), value);
+            }
+        }
+
         private static void WriteProperty(string PropertyName, object value)
         {
             Visio.Shape docShape = MyVisio.App.ActiveDocument.DocumentSheet;

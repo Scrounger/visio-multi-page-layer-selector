@@ -26,18 +26,6 @@ namespace Visio_Multi_Page_Layer_Selector.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string defaults {
-            get {
-                return ((string)(this["defaults"]));
-            }
-            set {
-                this["defaults"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string subCatergories {
             get {
                 return ((string)(this["subCatergories"]));
@@ -116,30 +104,6 @@ namespace Visio_Multi_Page_Layer_Selector.Properties {
             }
             set {
                 this["panel_width"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string myDefaults_list {
-            get {
-                return ((string)(this["myDefaults_list"]));
-            }
-            set {
-                this["myDefaults_list"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string myFavorites_list {
-            get {
-                return ((string)(this["myFavorites_list"]));
-            }
-            set {
-                this["myFavorites_list"] = value;
             }
         }
         

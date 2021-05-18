@@ -43,9 +43,9 @@ namespace Visio_Multi_Page_Layer_Selector.Helper
         {
             List<MyFavorites> list = new List<MyFavorites>();
 
-            if (!String.IsNullOrEmpty(Properties.Settings.Default.myFavorites_list))
+            if (!String.IsNullOrEmpty(MyDocumentProperties.FavoritesList))
             {
-                list = JsonConvert.DeserializeObject<List<MyFavorites>>(Properties.Settings.Default.myFavorites_list);
+                list = JsonConvert.DeserializeObject<List<MyFavorites>>(MyDocumentProperties.FavoritesList);
             }
 
             return list.OrderBy(i => i.Name).ToList();
@@ -53,8 +53,7 @@ namespace Visio_Multi_Page_Layer_Selector.Helper
 
         public static void SaveList(List<MyFavorites> list)
         {
-            Properties.Settings.Default.myFavorites_list = JsonConvert.SerializeObject(list);
-            Properties.Settings.Default.Save();
+            MyDocumentProperties.FavoritesList = JsonConvert.SerializeObject(list);
         }
     }
 }
