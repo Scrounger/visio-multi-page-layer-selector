@@ -328,6 +328,7 @@ namespace Visio_Multi_Page_Layer_Selector
             this.dgvFavorites.Size = new System.Drawing.Size(594, 346);
             this.dgvFavorites.TabIndex = 2;
             this.dgvFavorites.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvFavorites_CellContentClick);
+            this.dgvFavorites.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFavorites_CellDoubleClick);
             this.dgvFavorites.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvFavorites_CellFormatting);
             this.dgvFavorites.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvFavorites_ColumnHeaderMouseClick);
             // 

@@ -31,7 +31,7 @@ namespace Visio_Multi_Page_Layer_Selector
 
             Initialize_tabControl();
 
-            lbVersion.Text = string.Format("{0}: {1}", Properties.Resources.loc_version, typeof(ThisAddIn).Assembly.GetName().Version.ToString());
+            lbVersion.Text = string.Format("{0}: {1}", Properties.Resources.loc_version, System.Reflection.Assembly.GetExecutingAssembly().GetName().Version);
         }
 
         private void LayerChangeListener(Visio.Cell Cell)
@@ -461,6 +461,18 @@ namespace Visio_Multi_Page_Layer_Selector
             }
         }
 
+        private void dgvFavorites_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == dgvFavorites.Columns["Name"].Index)
+                {
+                    ChangeLayerSettings(((MyFavorites)dgvFavorites.Rows[e.RowIndex].DataBoundItem).Layers);
+                    dgvFavorites.EndEdit();
+                }
+            }
+        }
+
         private void DgvFavorites_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (dgvFavorites.Rows.Count > 0)
@@ -687,7 +699,9 @@ namespace Visio_Multi_Page_Layer_Selector
             Initialize_dgvLayerSelector();
             Initialize_dgvDefaults();
         }
+
         #endregion
+
 
     }
 }

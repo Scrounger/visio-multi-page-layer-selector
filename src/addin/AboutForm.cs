@@ -19,7 +19,7 @@ namespace Visio_Multi_Page_Layer_Selector
 
         private void AboutForm_Load(object sender, EventArgs e)
         {
-            lbVersion.Text = string.Format("{0}: {1}", Properties.Resources.loc_version, typeof(ThisAddIn).Assembly.GetName().Version.ToString());
+            lbVersion.Text = string.Format("{0}: {1}", Properties.Resources.loc_version, System.Reflection.Assembly.GetExecutingAssembly().GetName().Version);
         }
 
         private void lbDonate_Click(object sender, EventArgs e)
