@@ -26,6 +26,7 @@
 
 ## Supported Microsoft Visio Version
 * Microsoft Visio <= 2016
+* Should work for Visio 2003 SP3 (COM addin only), 2007 SP3, 2010, 2013, 2016
 * Developed and tested with Microsoft Visio 2016
 
 ## Documentation
