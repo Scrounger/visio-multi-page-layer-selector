@@ -2,6 +2,11 @@
 	<img src="src/addin/Resources/img_mpls_64.png" />
 	Visio - Multi Page Layer Selector    
 </h1>
+
+![Downloads](https://img.shields.io/github/v/release/Scrounger/visio-multi-page-layer-selector)
+![Downloads](https://img.shields.io/github/downloads/Scrounger/visio-multi-page-layer-selector/latest/total)
+![Downloads](https://img.shields.io/github/downloads/Scrounger/visio-multi-page-layer-selector/total)
+
 <h3>Addin for Microsoft Visio that allows you to configure layer settings for all pages, set default and favorites.</h3>
 
 <br>
@@ -10,9 +15,7 @@
 
 <br>
 
-![Downloads](https://img.shields.io/github/v/release/Scrounger/visio-multi-page-layer-selector)
-![Downloads](https://img.shields.io/github/downloads/Scrounger/visio-multi-page-layer-selector/latest/total)
-![Downloads](https://img.shields.io/github/downloads/Scrounger/visio-multi-page-layer-selector/total)
+
 
 
 <!-- omit in toc -->
