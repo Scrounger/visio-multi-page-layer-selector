@@ -10,8 +10,9 @@
 
 <br>
 
-![Downloads](https://img.shields.io/github/downloads/Scrounger/visio-multi-page-layer-selector/total)
+![Downloads](https://img.shields.io/github/v/release/Scrounger/visio-multi-page-layer-selector)
 ![Downloads](https://img.shields.io/github/downloads/Scrounger/visio-multi-page-layer-selector/latest/total)
+![Downloads](https://img.shields.io/github/downloads/Scrounger/visio-multi-page-layer-selector/total)
 
 
 <!-- omit in toc -->
