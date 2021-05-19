@@ -53,5 +53,5 @@
 -->
 
 <!-- omit in toc -->
-### 1.0.0 (2021-05-18)
+### 1.0.0 (2021-05-19)
 * (Scrounger) release published
