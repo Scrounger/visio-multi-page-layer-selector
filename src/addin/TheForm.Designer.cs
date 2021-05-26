@@ -68,6 +68,13 @@ namespace Visio_Multi_Page_Layer_Selector
             this.lbVersion = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.linkDonate = new System.Windows.Forms.LinkLabel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cbFavVisible = new System.Windows.Forms.CheckBox();
+            this.cbFavPrint = new System.Windows.Forms.CheckBox();
+            this.cbFavActive = new System.Windows.Forms.CheckBox();
+            this.cbFavLock = new System.Windows.Forms.CheckBox();
+            this.cbFavSnap = new System.Windows.Forms.CheckBox();
+            this.cbFavGlue = new System.Windows.Forms.CheckBox();
             this.tabControl.SuspendLayout();
             this.tabLayerSelector.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLayerSelector)).BeginInit();
@@ -80,6 +87,7 @@ namespace Visio_Multi_Page_Layer_Selector
             ((System.ComponentModel.ISupportInitialize)(this.dgvDefaults)).BeginInit();
             this.tabSettings.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -393,6 +401,7 @@ namespace Visio_Multi_Page_Layer_Selector
             // 
             // tabSettings
             // 
+            this.tabSettings.Controls.Add(this.flowLayoutPanel1);
             this.tabSettings.Controls.Add(this.cbSettingsGlue);
             this.tabSettings.Controls.Add(this.cbSettingsSnap);
             this.tabSettings.Controls.Add(this.cbSettingsLock);
@@ -539,6 +548,86 @@ namespace Visio_Multi_Page_Layer_Selector
             this.linkDonate.Text = "linkLabel1";
             this.linkDonate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkDonate_LinkClicked);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.cbFavVisible);
+            this.flowLayoutPanel1.Controls.Add(this.cbFavPrint);
+            this.flowLayoutPanel1.Controls.Add(this.cbFavActive);
+            this.flowLayoutPanel1.Controls.Add(this.cbFavLock);
+            this.flowLayoutPanel1.Controls.Add(this.cbFavSnap);
+            this.flowLayoutPanel1.Controls.Add(this.cbFavGlue);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 180);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(594, 166);
+            this.flowLayoutPanel1.TabIndex = 6;
+            // 
+            // cbFavVisible
+            // 
+            this.cbFavVisible.AutoSize = true;
+            this.cbFavVisible.Location = new System.Drawing.Point(3, 3);
+            this.cbFavVisible.Name = "cbFavVisible";
+            this.cbFavVisible.Size = new System.Drawing.Size(86, 17);
+            this.cbFavVisible.TabIndex = 0;
+            this.cbFavVisible.Text = "cbFavVisible";
+            this.cbFavVisible.UseVisualStyleBackColor = true;
+            this.cbFavVisible.CheckedChanged += new System.EventHandler(this.cbFavVisible_CheckedChanged);
+            // 
+            // cbFavPrint
+            // 
+            this.cbFavPrint.AutoSize = true;
+            this.cbFavPrint.Location = new System.Drawing.Point(95, 3);
+            this.cbFavPrint.Name = "cbFavPrint";
+            this.cbFavPrint.Size = new System.Drawing.Size(77, 17);
+            this.cbFavPrint.TabIndex = 1;
+            this.cbFavPrint.Text = "cbFavPrint";
+            this.cbFavPrint.UseVisualStyleBackColor = true;
+            this.cbFavPrint.CheckedChanged += new System.EventHandler(this.cbFavPrint_CheckedChanged);
+            // 
+            // cbFavActive
+            // 
+            this.cbFavActive.AutoSize = true;
+            this.cbFavActive.Location = new System.Drawing.Point(178, 3);
+            this.cbFavActive.Name = "cbFavActive";
+            this.cbFavActive.Size = new System.Drawing.Size(86, 17);
+            this.cbFavActive.TabIndex = 2;
+            this.cbFavActive.Text = "cbFavActive";
+            this.cbFavActive.UseVisualStyleBackColor = true;
+            this.cbFavActive.CheckedChanged += new System.EventHandler(this.cbFavActive_CheckedChanged);
+            // 
+            // cbFavLock
+            // 
+            this.cbFavLock.AutoSize = true;
+            this.cbFavLock.Location = new System.Drawing.Point(270, 3);
+            this.cbFavLock.Name = "cbFavLock";
+            this.cbFavLock.Size = new System.Drawing.Size(80, 17);
+            this.cbFavLock.TabIndex = 3;
+            this.cbFavLock.Text = "cbFavLock";
+            this.cbFavLock.UseVisualStyleBackColor = true;
+            this.cbFavLock.CheckedChanged += new System.EventHandler(this.cbFavLock_CheckedChanged);
+            // 
+            // cbFavSnap
+            // 
+            this.cbFavSnap.AutoSize = true;
+            this.cbFavSnap.Location = new System.Drawing.Point(356, 3);
+            this.cbFavSnap.Name = "cbFavSnap";
+            this.cbFavSnap.Size = new System.Drawing.Size(81, 17);
+            this.cbFavSnap.TabIndex = 4;
+            this.cbFavSnap.Text = "cbFavSnap";
+            this.cbFavSnap.UseVisualStyleBackColor = true;
+            this.cbFavSnap.CheckedChanged += new System.EventHandler(this.cbFavSnap_CheckedChanged);
+            // 
+            // cbFavGlue
+            // 
+            this.cbFavGlue.AutoSize = true;
+            this.cbFavGlue.Location = new System.Drawing.Point(443, 3);
+            this.cbFavGlue.Name = "cbFavGlue";
+            this.cbFavGlue.Size = new System.Drawing.Size(78, 17);
+            this.cbFavGlue.TabIndex = 5;
+            this.cbFavGlue.Text = "cbFavGlue";
+            this.cbFavGlue.UseVisualStyleBackColor = true;
+            this.cbFavGlue.CheckedChanged += new System.EventHandler(this.cbFavGlue_CheckedChanged);
+            // 
             // TheForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -571,6 +660,8 @@ namespace Visio_Multi_Page_Layer_Selector
             this.tabSettings.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -603,5 +694,12 @@ namespace Visio_Multi_Page_Layer_Selector
         private Label lbVersion;
         private TableLayoutPanel tableLayoutPanel1;
         private Label lbDivider;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private CheckBox cbFavVisible;
+        private CheckBox cbFavPrint;
+        private CheckBox cbFavActive;
+        private CheckBox cbFavLock;
+        private CheckBox cbFavSnap;
+        private CheckBox cbFavGlue;
     }
 }

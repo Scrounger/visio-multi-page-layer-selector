@@ -42,8 +42,10 @@ namespace Visio_Multi_Page_Layer_Selector
             }
         }
 
-        private void ChangeLayerSettings(List<MyLayer> list)
+        private void ChangeLayerSettings(List<MyLayer> list, bool isFavorite)
         {
+            List<MyDefaults> defaultList = MyDefaults.getList();
+
             foreach (Visio.Page page in MyVisio.App.ActiveDocument.Pages)
             {
                 foreach (Visio.Layer layer in page.Layers)
@@ -81,6 +83,42 @@ namespace Visio_Multi_Page_Layer_Selector
                         if (MyDocumentProperties.ShowGlue)
                         {
                             layer.CellsC[(int)Visio.VisCellIndices.visLayerGlue].Formula = item.Glue == true ? "1" : "0";
+                        }
+                    }
+                    else
+                    {
+                        MyDefaults defaultItem = defaultList.Find(x => x.Name.Equals(layer.Name));
+
+                        if (defaultItem != null)
+                        {
+                            layer.CellsC[(int)Visio.VisCellIndices.visLayerVisible].Formula = defaultItem.Visible == true ? "1" : "0";
+
+                            layer.CellsC[(int)Visio.VisCellIndices.visLayerPrint].Formula = defaultItem.Print == true ? "1" : "0";
+
+                            layer.CellsC[(int)Visio.VisCellIndices.visLayerActive].Formula = defaultItem.Active == true ? "1" : "0";
+
+                            layer.CellsC[(int)Visio.VisCellIndices.visLayerLock].Formula = defaultItem.Lock == true ? "1" : "0";
+
+                            layer.CellsC[(int)Visio.VisCellIndices.visLayerSnap].Formula = defaultItem.Snap == true ? "1" : "0";
+
+                            layer.CellsC[(int)Visio.VisCellIndices.visLayerGlue].Formula = defaultItem.Glue == true ? "1" : "0";
+                        }
+                        else
+                        {
+                            if (isFavorite)
+                            {
+                                layer.CellsC[(int)Visio.VisCellIndices.visLayerVisible].Formula = MyDocumentProperties.ShowFavVisible == true ? "1" : "0";
+
+                                layer.CellsC[(int)Visio.VisCellIndices.visLayerPrint].Formula = MyDocumentProperties.ShowFavPrint == true ? "1" : "0";
+
+                                layer.CellsC[(int)Visio.VisCellIndices.visLayerActive].Formula = MyDocumentProperties.ShowFavActive == true ? "1" : "0";
+
+                                layer.CellsC[(int)Visio.VisCellIndices.visLayerLock].Formula = MyDocumentProperties.ShowFavLock == true ? "1" : "0";
+
+                                layer.CellsC[(int)Visio.VisCellIndices.visLayerSnap].Formula = MyDocumentProperties.ShowFavSnap == true ? "1" : "0";
+
+                                layer.CellsC[(int)Visio.VisCellIndices.visLayerGlue].Formula = MyDocumentProperties.ShowFavGlue == true ? "1" : "0";
+                            }
                         }
                     }
                 }
@@ -324,7 +362,7 @@ namespace Visio_Multi_Page_Layer_Selector
 
         private void BtnApply_Click(object sender, EventArgs e)
         {
-            ChangeLayerSettings((List<MyLayer>)dgvLayerSelector.DataSource);
+            ChangeLayerSettings((List<MyLayer>)dgvLayerSelector.DataSource, false);
         }
 
         private void BtnFavorites_Click(object sender, EventArgs e)
@@ -430,7 +468,7 @@ namespace Visio_Multi_Page_Layer_Selector
         {
             if (e.ColumnIndex == dgvFavorites.Columns["imgCheck"].Index)
             {
-                ChangeLayerSettings(((MyFavorites)dgvFavorites.Rows[e.RowIndex].DataBoundItem).Layers);
+                ChangeLayerSettings(((MyFavorites)dgvFavorites.Rows[e.RowIndex].DataBoundItem).Layers, true);
             }
 
             if (e.ColumnIndex == dgvFavorites.Columns["imgDelete"].Index)
@@ -467,7 +505,7 @@ namespace Visio_Multi_Page_Layer_Selector
             {
                 if (e.ColumnIndex == dgvFavorites.Columns["Name"].Index)
                 {
-                    ChangeLayerSettings(((MyFavorites)dgvFavorites.Rows[e.RowIndex].DataBoundItem).Layers);
+                    ChangeLayerSettings(((MyFavorites)dgvFavorites.Rows[e.RowIndex].DataBoundItem).Layers, true);
                     dgvFavorites.EndEdit();
                 }
             }
@@ -656,6 +694,26 @@ namespace Visio_Multi_Page_Layer_Selector
 
             cbSettingsGlue.Checked = MyDocumentProperties.ShowGlue;
             cbSettingsGlue.Text = Properties.Resources.loc_show_glue_column;
+
+
+
+            cbFavVisible.Checked = MyDocumentProperties.ShowFavVisible;
+            cbFavVisible.Text = Properties.Resources.loc_show_fav_visible;
+
+            cbFavPrint.Checked = MyDocumentProperties.ShowFavPrint;
+            cbFavPrint.Text = Properties.Resources.loc_show_fav_print;
+
+            cbFavActive.Checked = MyDocumentProperties.ShowFavActive;
+            cbFavActive.Text = Properties.Resources.loc_show_fav_active;
+
+            cbFavLock.Checked = MyDocumentProperties.ShowFavLock;
+            cbFavLock.Text = Properties.Resources.loc_show_fav_lock;
+
+            cbFavSnap.Checked = MyDocumentProperties.ShowFavSnap;
+            cbFavSnap.Text = Properties.Resources.loc_show_fav_snap;
+
+            cbFavGlue.Checked = MyDocumentProperties.ShowFavGlue;
+            cbFavGlue.Text = Properties.Resources.loc_show_fav_glue;
         }
 
         private void CbSettingsVisible_CheckedChanged(object sender, EventArgs e)
@@ -694,6 +752,42 @@ namespace Visio_Multi_Page_Layer_Selector
             SaveSettings();
         }
 
+        private void cbFavVisible_CheckedChanged(object sender, EventArgs e)
+        {
+            MyDocumentProperties.ShowFavVisible = cbSettingsVisible.Checked;
+            SaveSettings();
+        }
+
+        private void cbFavPrint_CheckedChanged(object sender, EventArgs e)
+        {
+            MyDocumentProperties.ShowFavPrint = cbSettingsVisible.Checked;
+            SaveSettings();
+        }
+
+        private void cbFavActive_CheckedChanged(object sender, EventArgs e)
+        {
+            MyDocumentProperties.ShowFavActive = cbSettingsVisible.Checked;
+            SaveSettings();
+        }
+
+        private void cbFavLock_CheckedChanged(object sender, EventArgs e)
+        {
+            MyDocumentProperties.ShowFavLock = cbSettingsVisible.Checked;
+            SaveSettings();
+        }
+
+        private void cbFavSnap_CheckedChanged(object sender, EventArgs e)
+        {
+            MyDocumentProperties.ShowFavSnap = cbSettingsVisible.Checked;
+            SaveSettings();
+        }
+
+        private void cbFavGlue_CheckedChanged(object sender, EventArgs e)
+        {
+            MyDocumentProperties.ShowFavGlue = cbSettingsVisible.Checked;
+            SaveSettings();
+        }
+
         private void SaveSettings()
         {
             Initialize_dgvLayerSelector();
@@ -701,7 +795,5 @@ namespace Visio_Multi_Page_Layer_Selector
         }
 
         #endregion
-
-
     }
 }

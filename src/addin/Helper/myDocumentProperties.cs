@@ -91,6 +91,85 @@ namespace Visio_Multi_Page_Layer_Selector.Helper
             }
         }
 
+
+        public static bool ShowFavVisible
+        {
+            get
+            {
+                string result = ReadProperty(GetPropertyName());
+                return !string.IsNullOrEmpty(result) ? Convert.ToBoolean(result) : false;
+            }
+            set
+            {
+                WriteProperty(GetPropertyName(), value);
+            }
+        }
+
+        public static bool ShowFavPrint
+        {
+            get
+            {
+                string result = ReadProperty(GetPropertyName());
+                return !string.IsNullOrEmpty(result) ? Convert.ToBoolean(result) : false;
+            }
+            set
+            {
+                WriteProperty(GetPropertyName(), value);
+            }
+        }
+
+        public static bool ShowFavActive
+        {
+            get
+            {
+                string result = ReadProperty(GetPropertyName());
+                return !string.IsNullOrEmpty(result) ? Convert.ToBoolean(result) : false;
+            }
+            set
+            {
+                WriteProperty(GetPropertyName(), value);
+            }
+        }
+
+        public static bool ShowFavLock
+        {
+            get
+            {
+                string result = ReadProperty(GetPropertyName());
+                return !string.IsNullOrEmpty(result) ? Convert.ToBoolean(result) : true;
+            }
+            set
+            {
+                WriteProperty(GetPropertyName(), value);
+            }
+        }
+
+        public static bool ShowFavSnap
+        {
+            get
+            {
+                string result = ReadProperty(GetPropertyName());
+                return !string.IsNullOrEmpty(result) ? Convert.ToBoolean(result) : true;
+            }
+            set
+            {
+                WriteProperty(GetPropertyName(), value);
+            }
+        }
+
+        public static bool ShowFavGlue
+        {
+            get
+            {
+                string result = ReadProperty(GetPropertyName());
+                return !string.IsNullOrEmpty(result) ? Convert.ToBoolean(result) : true;
+            }
+            set
+            {
+                WriteProperty(GetPropertyName(), value);
+            }
+        }
+
         public static string FavoritesList
         {
             get

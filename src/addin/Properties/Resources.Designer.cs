@@ -485,6 +485,60 @@ namespace Visio_Multi_Page_Layer_Selector.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die active ähnelt.
+        /// </summary>
+        internal static string loc_show_fav_active {
+            get {
+                return ResourceManager.GetString("loc_show_fav_active", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die glue ähnelt.
+        /// </summary>
+        internal static string loc_show_fav_glue {
+            get {
+                return ResourceManager.GetString("loc_show_fav_glue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die lock ähnelt.
+        /// </summary>
+        internal static string loc_show_fav_lock {
+            get {
+                return ResourceManager.GetString("loc_show_fav_lock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die print ähnelt.
+        /// </summary>
+        internal static string loc_show_fav_print {
+            get {
+                return ResourceManager.GetString("loc_show_fav_print", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die snap ähnelt.
+        /// </summary>
+        internal static string loc_show_fav_snap {
+            get {
+                return ResourceManager.GetString("loc_show_fav_snap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die visible ähnelt.
+        /// </summary>
+        internal static string loc_show_fav_visible {
+            get {
+                return ResourceManager.GetString("loc_show_fav_visible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die show glue column ähnelt.
         /// </summary>
         internal static string loc_show_glue_column {
